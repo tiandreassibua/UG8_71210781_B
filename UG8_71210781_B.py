@@ -8,7 +8,7 @@ class CircularQueue():
     def enqueue(self, data):
 
         if ((self.tail + 1) % self.k == self.head):
-            print("Antrian Penuh!\n")
+            print("\nAntrian Penuh!")
 
         elif (self.head == -1):
             self.head = 0
@@ -37,17 +37,16 @@ class CircularQueue():
             print("Kosong!")
 
         elif (self.tail >= self.head):
-            print("Yang ada pada antrian adalah: ",end="")
+            print("Yang ada pada antrian adalah: ", end="")
             for i in range(self.head, self.tail + 1):
                 print(self.queue[i], end=" ")
             print()
         else:
-            print("Yang ada pada antrian Circular adalah: ",end="")
+            print("Yang ada pada antrian Circular adalah: ", end="")
             for i in range(self.head, self.k):
                 print(self.queue[i], end=" ")
             for i in range(0, self.tail + 1):
                 print(self.queue[i], end=" ")
-            print("\nAntrian penuh")
 
 
 circularQueue = CircularQueue(5)
@@ -63,3 +62,4 @@ circularQueue.enqueue(9)
 circularQueue.enqueue(20)
 circularQueue.enqueue(5)
 circularQueue.display()
+circularQueue.enqueue(45)
